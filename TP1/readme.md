@@ -1,6 +1,6 @@
 # TP1
 
-## **Recursos**
+## * Recursos
 <table border="0">
   <tr valign="center">
     <td><img src="../imgs/docker.png" alt="Docker" height="60"></td>
@@ -9,15 +9,29 @@
   </tr>
 </table>
 
-## **Contenido**
+## * Contenido
 
-TP1/
-│
-├── docker-compose.yml     # Archivo de configuración de Docker Compose para generar el entorno
-├── 2.chinook_pg_serial_pk_proper_naming.sql	    # Sentencias de inicialización de la DB
-├── PracticaChinook.sql	    # Consignas
-├── README.md
-
+<table border="0">
+  <tr valign="center">
+    <td colspan="2">TP 1</td>
+  </tr>
+  <tr valign="center">
+    <td>docker-compose.yml</td>
+    <td># Archivo de configuración de Docker Compose para generar el entorno</td>
+  </tr>
+  <tr valign="center">
+    <td>2.chinook_pg_serial_pk_proper_naming.sql</td>
+    <td># Sentencias de inicialización de la DB</td>
+  </tr>
+    <tr valign="center">
+    <td>PracticaChinook.sql</td>
+    <td># Consignas</td>
+  </tr>
+    <tr valign="center">
+    <td>README.md</td>
+    <td> </td>
+  </tr>
+</table>
 
 ## **Set Up**
 
