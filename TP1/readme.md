@@ -1,5 +1,7 @@
 # TP1
 
+<br>
+
 ## Recursos
 <table border="0">
   <tr valign="center">
@@ -8,6 +10,7 @@
     <td><img src="../imgs/cloudbeaver.png" alt="CloudBeaver" height="40"></td>
   </tr>
 </table>
+<br>
 
 ## Contenido
 
@@ -32,6 +35,7 @@
     <td> </td>
   </tr>
 </table>
+<br>
 
 ## Set Up
 
@@ -50,6 +54,9 @@ Aguardar hasta que todos los servicios estén en estado "Up (health: healthy)".
 
 Acceso a CloudBeaver: http://localhost:8978
 
+<br>
 
-## **Entregable**
+
+## Entregable
+
 
