@@ -60,7 +60,7 @@ Acceso a CloudBeaver: http://localhost:8978
 ## Entregable
 <table border="0">
   <tr valign="center">
-    <td><img src="../imgs/pdf.png" alt="PDF" height="60"></td>
+    <td><img src="../imgs/pdf.png" alt="PDF" height="40"></td>
     <td><a href="./CEIA_BDIA_TP1_a1618.pdf" target="_blank">Entregable TP1</a></td>
   </tr>
 </table>
