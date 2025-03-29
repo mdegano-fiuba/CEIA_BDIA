@@ -6,11 +6,11 @@
 
 <br>  
 
-* **Alumno**:  Ing. Myrna Degano (a1618) - <br><a href="mailto:myrna.l.degano@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Gmail-myrna.l.degano@gmail.com-B9E1F5?style=flat-square&logo=gmail"></a>
+* **Alumno**:  Ing. Myrna Degano (a1618)<br><a href="mailto:myrna.l.degano@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Gmail-myrna.l.degano@gmail.com-B9E1F5?style=flat-square&logo=gmail"></a>
 
 <br>
 
-* **Referencias**:  <a href="https://github.com/FIUBA-Posgrado-Inteligencia-Artificial/BDIA" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/FIUBA%20Posgrado%20Inteligencia%20Artificial-Bases%20de%20datos%20para%20IA-B9E1F5?style=flat-square&logo=github"></a>
+* **Referencias**:  <br><a href="https://github.com/FIUBA-Posgrado-Inteligencia-Artificial/BDIA" target="_blank"><img alt="GitHub" src="https://img.shields.io/badge/FIUBA%20Posgrado%20Inteligencia%20Artificial-Bases%20de%20datos%20para%20IA-B9E1F5?style=flat-square&logo=github"></a>
 
 <br><br>
 
