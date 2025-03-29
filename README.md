@@ -6,7 +6,7 @@
 
 <br>  
 
-* **Alumno**:  Ing. Myrna Degano (a1618)<br><a href="mailto:myrna.l.degano@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Gmail-myrna.l.degano@gmail.com-B9E1F5?style=flat-square&logo=gmail"></a>
+* **Alumno**:  Myrna Degano (a1618)<br><a href="mailto:myrna.l.degano@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Gmail-myrna.l.degano@gmail.com-B9E1F5?style=flat-square&logo=gmail"></a>
 
 <br>
 
