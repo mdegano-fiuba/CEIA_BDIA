@@ -1,7 +1,4 @@
-## Objetivo
-
-Este repositorio contiene los trabajos prácticos de la materia "**Bases de datos para Inteligencia Artificial**" de la carrera de "*Especialización en Inteligencia Artificial*" de la *Facultad de Ingeniería* de la *Universidad de Buenos Aires*.
-
+## Bases de datos para Inteligencia Artificial
 
 * **Docentes**:  
 Pablo Octaviano - Juan Pinelli
