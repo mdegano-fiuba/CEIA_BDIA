@@ -58,6 +58,10 @@ Acceso a CloudBeaver: http://localhost:8978
 
 
 ## Entregable
-<a href="./CEIA_DBIA_TP1_a1618.pdf" target="_blank"><img alt="Entregable" src="https://img.shields.io/badge/PDF-TP1-B9E1F5?style=flat-square&logo=pdf&logoColor=white"></a>
-<a href="URL_DEL_PDF" target="_blank"><img alt="PDF" src="https://img.shields.io/badge/PDF-TP1-B9E1F5?style=flat-square&logo=fa-pdf&logoColor=white"></a>
-
+<table border="0">
+  <tr valign="center">
+    <td><img src="../imgs/pdf.png" alt="PDF" height="60"></td>
+    <td><a href="./CEIA_BDIA_TP1_a1618.pdf" target="_blank">Entregable TP1</a></td>
+  </tr>
+</table>
+<br>
