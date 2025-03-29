@@ -58,5 +58,5 @@ Acceso a CloudBeaver: http://localhost:8978
 
 
 ## Entregable
-
+<a href="./CEIA_DBIA_TP1_a1618.pdf" target="_blank"><img alt="Entregable" src="https://img.shields.io/badge/PDF-TP1-B9E1F5?style=flat-square&logo=adobe"></a>
 
