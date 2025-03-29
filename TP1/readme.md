@@ -2,11 +2,11 @@
 
 * **Recursos**
 <br>
-<table>
-  <tr>
-    <td><img src="../imgs/docker.png" alt="Docker" height="20"></td>
-    <td><img src="../imgs/postgresql.png" alt="PostgreSQL" height="20"></td>
-    <td><img src="../imgs/cloudbeaver.png" alt="Cloudbeaver" height="20"></td>
+<table border="0">
+  <tr valign="center">
+    <td><img src="../imgs/docker.png" alt="Docker" height="50"></td>
+    <td><img src="../imgs/postgresql.png" alt="PostgreSQL" height="100"></td>
+    <td><img src="../imgs/cloudbeaver.png" alt="Cloudbeaver" height="50"></td>
   </tr>
 </table>
 
