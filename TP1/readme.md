@@ -1,6 +1,6 @@
 # TP1
 
-## * Recursos
+## Recursos
 <table border="0">
   <tr valign="center">
     <td><img src="../imgs/docker.png" alt="Docker" height="60"></td>
@@ -9,7 +9,7 @@
   </tr>
 </table>
 
-## * Contenido
+## Contenido
 
 <table border="0">
   <tr valign="center">
@@ -33,7 +33,7 @@
   </tr>
 </table>
 
-## **Set Up**
+## Set Up
 
 Ejecutar el siguiente comando para generar el entorno (PostgreSQL + CloudBeaver):
 
@@ -48,8 +48,7 @@ docker ps -a
 
 Aguardar hasta que todos los servicios estén en estado "Up (health: healthy)".
 
-Acceder a CloudBeaver a través de: 
-http://localhost:8978
+Acceso a CloudBeaver: http://localhost:8978
 
 
 ## **Entregable**
