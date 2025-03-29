@@ -18,8 +18,3 @@
 <a href="https://github.com/mdegano-fiuba/CEIA_BDIA/tree/main/TP1" target="_blank"><img alt="TP1" src="https://img.shields.io/badge/Github-TP1-B9E1F5?style=flat-square&logo=github"></a>
 <br>
 
-## *TP 2 - TBD*
-<br>
-
-## *TP 3 - TBD*
-<br>
