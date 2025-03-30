@@ -2,7 +2,7 @@
 
 <br>
 
-## Recursos
+## Herramientas
 <table border="0">
   <tr valign="center">
     <td><img src="../imgs/docker.png" alt="Docker" height="60"></td>
