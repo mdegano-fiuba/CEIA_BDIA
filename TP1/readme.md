@@ -29,11 +29,6 @@
     <tr valign="center">
     <td>PracticaChinook.sql</td>
     <td># Consignas</td>
-  </tr>
-    <tr valign="center">
-    <td>README.md</td>
-    <td> </td>
-  </tr>
 </table>
 <br>
 
