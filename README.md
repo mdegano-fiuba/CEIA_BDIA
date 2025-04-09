@@ -17,4 +17,6 @@
 ## *TP 1 - PostgreSQL*
 <a href="https://github.com/mdegano-fiuba/CEIA_BDIA/tree/main/TP1" target="_blank"><img alt="TP1" src="https://img.shields.io/badge/Github-TP1-B9E1F5?style=flat-square&logo=github"></a>
 <br>
-
+## *TP 2 - MongoDB*
+<a href="https://github.com/mdegano-fiuba/CEIA_BDIA/tree/main/TP2" target="_blank"><img alt="TP2" src="https://img.shields.io/badge/Github-TP2-B9E1F5?style=flat-square&logo=github"></a>
+<br>
