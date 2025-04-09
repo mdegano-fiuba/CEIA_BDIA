@@ -1,0 +1,30 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo_container
+    restart: always
+    ports:
+      - "27017:27017"  
+    volumes:
+      - mongo_data:/data/db  
+      - ./facturas.json:/tmp/facturas.json
+      - ./import.sh:/docker-entrypoint-initdb.d/import.sh
+    networks:
+      - db_network
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo  
+      MONGO_INITDB_ROOT_PASSWORD: mongo  
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s      
+      timeout: 5s        
+      retries: 5         
+      start_period: 30s 
+
+networks:
+  db_network:
+    driver: bridge
+
+volumes:
+  mongo_data:
+
