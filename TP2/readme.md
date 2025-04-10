@@ -45,10 +45,11 @@ docker ps -a
 ```
 
 Aguardar hasta que el estado sea "Up (health: healthy)".
-
+<br><br>
 Acceso al contenedor con Mongo Shell:  
+```Bash
 docker exec -it mongo_container mongosh -u mongo -p mongo --authenticationDatabase admin
-
+```
 <br>
 
 
