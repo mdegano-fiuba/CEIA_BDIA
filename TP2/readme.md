@@ -28,6 +28,11 @@
     <tr valign="center">
     <td>facturas.json</td>
     <td># Datos para importar en la base de datos</td>
+  </tr>
+    <tr valign="center">
+    <td>MongoDB - Aggregation Framework.pdf</td>
+    <td># Consignas</td>
+  </tr>
 </table>
 <br>
 
