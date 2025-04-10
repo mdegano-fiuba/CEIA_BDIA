@@ -6,7 +6,7 @@
 <table border="0">
   <tr valign="center">
     <td><img src="../imgs/docker.png" alt="Docker" height="60"></td>
-    <td><img src="../imgs/mongodb.png" alt="MongoDB" height="60"></td>
+    <td><img src="../imgs/mongodb.png" alt="MongoDB" height="40"></td>
   </tr>
 </table>
 <br>
