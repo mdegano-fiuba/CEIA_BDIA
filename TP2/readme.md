@@ -15,38 +15,39 @@
 
 <table border="0">
   <tr valign="center">
-    <td colspan="2">TP 1</td>
+    <td colspan="2">TP 2</td>
   </tr>
   <tr valign="center">
     <td>docker-compose.yml</td>
     <td># Archivo de configuración de Docker Compose para generar el entorno</td>
   </tr>
   <tr valign="center">
-    <td>2.chinook_pg_serial_pk_proper_naming.sql</td>
-    <td># Sentencias de inicialización de la DB</td>
+    <td>import.sh</td>
+    <td># Archivo para crear la base de datos</td>
   </tr>
     <tr valign="center">
-    <td>PracticaChinook.sql</td>
-    <td># Consignas</td>
+    <td>facturas.json</td>
+    <td># Datos para importar en la base de datos</td>
 </table>
 <br>
 
 ## Set Up
 
-Ejecutar el siguiente comando para generar el entorno (PostgreSQL + CloudBeaver):
+Ejecutar el siguiente comando para generar el entorno (MongoDB):
 
 ```Bash
 docker-compose up -d
 ```
 
-Ejecutar el siguiente comando para verificar el estado de los contenedores:
+Ejecutar el siguiente comando para verificar el estado del contenedor:
 ```Bash
 docker ps -a
 ```
 
-Aguardar hasta que todos los servicios estén en estado "Up (health: healthy)".
+Aguardar hasta que el estado sea "Up (health: healthy)".
 
-Acceso a CloudBeaver: http://localhost:8978
+Acceso al contenedor con Mongo Shell:  
+docker exec -it mongo_container mongosh -u mongo -p mongo --authenticationDatabase admin
 
 <br>
 
@@ -55,7 +56,7 @@ Acceso a CloudBeaver: http://localhost:8978
 <table border="0">
   <tr valign="center">
     <td><img src="../imgs/pdf.png" alt="PDF" height="40"></td>
-    <td><a href="./CEIA_BDIA_TP1_a1618.pdf" target="_blank">Entregable TP1</a></td>
+    <td><a href="./CEIA_BDIA_TP2_a1618.pdf" target="_blank">Entregable TP2</a></td>
   </tr>
 </table>
 <br>
