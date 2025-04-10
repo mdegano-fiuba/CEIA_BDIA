@@ -29,6 +29,7 @@
     <tr valign="center">
     <td>PracticaChinook.sql</td>
     <td># Consignas</td>
+  </tr>
 </table>
 <br>
 
