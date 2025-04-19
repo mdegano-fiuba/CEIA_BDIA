@@ -15,22 +15,22 @@
 
 <table border="0">
   <tr valign="center">
-    <td colspan="2">TP 2</td>
+    <td colspan="2">TP 3</td>
   </tr>
   <tr valign="center">
     <td>docker-compose.yml</td>
     <td># Archivo de configuración de Docker Compose para generar el entorno</td>
   </tr>
   <tr valign="center">
-    <td>import.sh</td>
+    <td>XXX</td>
     <td># Archivo para crear la base de datos</td>
   </tr>
     <tr valign="center">
-    <td>facturas.json</td>
+    <td>XXXX</td>
     <td># Datos para importar en la base de datos</td>
   </tr>
     <tr valign="center">
-    <td>MongoDB - Aggregation Framework.pdf</td>
+    <td>TP 3 Bases de grafos.pdf</td>
     <td># Consignas</td>
   </tr>
 </table>
