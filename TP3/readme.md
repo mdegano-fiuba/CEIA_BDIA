@@ -26,7 +26,7 @@
     <td># Archivo para crear la base de datos</td>
   </tr>
     <tr valign="center">
-    <td>XXXX</td>
+    <td>Datos_Ejemplo_Neo.txt</td>
     <td># Datos para importar en la base de datos</td>
   </tr>
     <tr valign="center">
