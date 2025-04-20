@@ -1,38 +1,194 @@
-1.​ Obtener los nodos de todas las personas de la red.
-2.​ Obtener el nombre y fecha de nacimiento de la persona de apellido Domínguez.
-3.​ Obtener la lista de empresas en las que trabajó Domínguez.
-4.​ Obtener la lista de personas que estudiaron carreras que no son de nivel
-“Universitario” y los nombres de las carreras.
-5.​ Obtener los nodos etiquetados como Conocimiento.
-6.​ Obtener los nodos de todas las personas con nombre terminado en a.
-7.​ Crear un nodo para la persona Analía Martinelli si no existe.
-8.​ Asociar un conocimiento "Cálculo" a Analía Martinelli si no lo posee.
-9.​ Verificar si se creó duplicado del conocimiento "Cálculo".
-10.​Crear una relación ESTUDIO para Analía Martinelli con la carrera "Lic en Sist de Inf",
-estado "En curso".
-11.​Crear un nodo para Verónica Mendez.
-12.​Crear una relación CONOCE_A entre Analía y Verónica, asegurando que solo se
-cree una vez.
-13.​Actualizar o crear el nodo de Analía Martinelli con fecha de nacimiento 30/06/1968.
-14.​Agregarle la etiqueta "Empleado" y el país Argentina a Analía.
-15.​Eliminar la fecha de nacimiento y la etiqueta Persona de Analía.
-16.​Eliminar el nodo de Analía y todas sus relaciones.
-17.​Contar los nodos en total.
-18.​Contar los tipos de relaciones.
-19.​Listar todos los nodos y sus relaciones.
-20.​Obtener los nombres y rubros de las empresas registradas, reemplazando el rubro
-"Telefonía" por IT.
-21.​Determinar qué etiquetas tienen los nodos que son destino de la relación ESTUDIO.
-22.​Verificar las etiquetas de la carrera en la relación ESTUDIO.
-23.​Usar UNWIND para transformar una colección en filas individuales.
-24.​Contar la cantidad de personas que estudiaron una carrera en cualquier estado.
-25.​Identificar si puede llegarse directa o indirectamente desde Mario López hasta Jorge
-Lupis mediante la relación CONOCE_A.
-226.​Obtener el camino más corto entre Gustavo y Mario en la relación CONOCE_A.
-27.​Listar los caminos de relaciones de un camino determinado.
-28.​Verificar si una persona trabajó o trabajó en empresas que otro determinado
-profesional trabajo, para sugerir contactos.
-29.​Obtener los conocimientos más compartidos en cada carrera.
-30.​Ranking de los primeros 2 conocimientos de la carrera "Ing en Sistemas de
-Información".
+// 1.​ Obtener los nodos de todas las personas de la red.
+
+MATCH (x:Persona) 
+RETURN x
+
+// 2.​ Obtener el nombre y fecha de nacimiento de la persona de apellido Dominguez.
+
+MATCH (a:Persona {apellido: "Dominguez"}) 
+RETURN a.nombre, a.fechanac
+
+// 3.​ Obtener la lista de empresas en las que trabajó Dominguez.
+
+MATCH (a:Persona {apellido:"Dominguez"}) -[r:TRABAJO]->(b:Empresa) 
+RETURN b
+
+// 4.​ Obtener la lista de personas que estudiaron carreras que no son de nivel “Universitario” y los nombres de las carreras.
+
+MATCH (a:Persona) -[:ESTUDIO]->(b:Carrera) 
+WHERE b.nivel <> "Universitario" 
+RETURN a, b
+
+// 5.​ Obtener los nodos etiquetados como Conocimiento.
+
+MATCH (a:Conocimiento) 
+RETURN a
+
+// 6.​ Obtener los nodos de todas las personas con nombre terminado en a.
+
+MATCH (a:Persona) 
+WHERE a.nombre =~ ".*a" 
+RETURN a
+
+// 7.​ Crear un nodo para la persona Analía Martinelli si no existe.
+
+MERGE (n:Persona {nombre: "Analía", apellido: "Martinelli"}) 
+RETURN n
+
+// 8.​ Asociar un conocimiento "Cálculo" a Analía Martinelli si no lo posee.
+
+MATCH (n:Persona {nombre: "Analía", apellido: "Martinelli"})
+MERGE (c:Conocimiento {nombre: "Cálculo"})
+MERGE (n)-[p:POSEE]->(c)
+RETURN n, p, c
+
+// 9.​ Verificar si se creó duplicado del conocimiento "Cálculo".
+
+MATCH (n:Conocimiento {nombre: "Cálculo"}) 
+RETURN n
+
+// 10.​Crear una relación ESTUDIO para Analía Martinelli con la carrera "Lic en Sist de Inf", estado "En curso".
+
+MATCH (n:Persona { nombre: "Analía", apellido: "Martinelli" }), (c:Carrera { nombre: "Lic en Sist de Inf"})
+CREATE (n)-[r:ESTUDIO { estado: "En curso"}]->(c) 
+RETURN n, r, c
+
+// 11.​Crear un nodo para Verónica Mendez.
+
+MERGE (n:Persona {nombre: "Verónica", apellido: "Mendez"}) 
+RETURN n
+
+// 12.​Crear una relación CONOCE_A entre Analía y Verónica, asegurando que solo se cree una vez.
+
+MATCH (a:Persona {nombre: "Analía", apellido: "Martinelli"}), (b:Persona {nombre: "Verónica", apellido: "Mendez"})
+MERGE (a)-[r:CONOCE_A]->(b)
+RETURN a, r, b
+
+// 13.​Actualizar o crear el nodo de Analía Martinelli con fecha de nacimiento 30/06/1968.
+
+MERGE (n:Persona {nombre: "Analía", apellido: "Martinelli"})
+ON CREATE SET n.fechanac="30/06/1968"
+ON MATCH SET n.fechanac="30/06/1968"
+RETURN n
+
+// 14.​Agregarle la etiqueta "Empleado" y el país Argentina a Analía.
+
+MATCH (a:Persona {nombre: "Analía", apellido: "Martinelli"})
+SET a:Empleado, a.pais="Argentina"
+RETURN a
+
+// 15.​Eliminar la fecha de nacimiento y la etiqueta Persona de Analía.
+
+MATCH (a:Persona {nombre: "Analía", apellido: "Martinelli"})
+REMOVE a:Persona, a.fechanac
+RETURN a
+
+// 16.​Eliminar el nodo de Analía y todas sus relaciones.
+
+MATCH (a { nombre: "Analía", apellido: "Martinelli"})-[r]-()
+DELETE r, a
+
+// 17.​Contar los nodos en total.
+
+MATCH (n) 
+RETURN count(*)
+
+// 18.​Contar los tipos de relaciones.
+
+MATCH (n)-[r]->()
+RETURN type(r), count(*)
+
+// 19.​Listar todos los nodos y sus relaciones.
+
+MATCH (n)-[r]->(m)
+RETURN n as origen, r as relación, m as destino
+
+// 20.​Obtener los nombres y rubros de las empresas registradas, reemplazando el rubro "Telefonía" por IT.
+
+MATCH (e: Empresa)
+RETURN e.nombre as empresa, 
+CASE e.rubro
+WHEN "Telefonía" THEN "IT"
+ELSE e.rubro
+END as rubro
+
+// 21.​Determinar qué etiquetas tienen los nodos que son destino de la relación ESTUDIO.
+
+MATCH ()-[:ESTUDIO]->(b)
+RETURN DISTINCT labels(b)
+
+// 22.​Verificar las etiquetas de la carrera en la relación ESTUDIO.
+
+MATCH ()-[:ESTUDIO]->(c) 
+RETURN labels (c);
+
+MATCH ()-[:ESTUDIO]->(c) 
+RETURN c.nombre as carrera;
+
+// 23.​Usar UNWIND para transformar una colección en filas individuales.
+
+UNWIND['F1','F2','F3', 'F4', 'F5'] AS filas
+RETURN filas
+
+// 24.​Contar la cantidad de personas que estudiaron una carrera en cualquier estado.
+
+MATCH (n:Persona)-[:ESTUDIO]->(c:Carrera)
+RETURN count(distinct n) as estudiantes
+
+// 25.​Identificar si puede llegarse directa o indirectamente desde Mario López hasta Jorge Lupis mediante la relación CONOCE_A.
+
+MATCH camino=(a {nombre:"Mario", apellido:"López"})-[:CONOCE_A*]-(b {nombre:"Jorge", apellido:"Lupis"})
+RETURN camino
+
+// 26.​Obtener el camino más corto entre Gustavo y Mario en la relación CONOCE_A.
+
+MATCH (a {nombre:"Gustavo"}), (b {nombre:"Mario"}),
+camino=shortestPath((a)-[:CONOCE_A*]->(b))
+RETURN camino
+
+// 27.​Listar los caminos de relaciones de un camino determinado.
+
+MATCH camino=(a {nombre:"Mario", apellido:"López"})-[:CONOCE_A*]-(b {nombre:"Jorge", apellido:"Lupis"})
+RETURN relationships(camino)
+
+// 28.​Verificar si una persona trabajó o trabajó en empresas que otro determinado profesional trabajo, para sugerir contactos.
+
+MATCH (a:Persona)-[:TRABAJO]->()<-[:TRABAJO]-(b:Persona)
+WHERE id(a) <> id(b)
+AND NOT (a)-[:CONOCE_A]-(b)
+RETURN DISTINCT a.nombre, a.apellido, b.nombre, b.apellido
+
+// 29.​Obtener los conocimientos más compartidos en cada carrera.
+
+MATCH (a:Persona)-[:POSEE]->(c:Conocimiento), (a)-[:ESTUDIO]->(d:Carrera)
+RETURN d.nombre as carrera, c.nombre as conocimiento, count(distinct a) AS cantidad
+ORDER by d.nombre, cantidad DESC;
+
+// Un único conocimiento por carrera:
+
+MATCH (a:Persona)-[:POSEE]->(:Conocimiento), (a)-[:ESTUDIO]->(d:Carrera)
+WITH DISTINCT d.nombre AS carrera
+
+CALL {
+  WITH carrera
+  MATCH (a:Persona)-[:POSEE]->(c:Conocimiento), (a)-[:ESTUDIO]->(d:Carrera)
+  WHERE d.nombre = carrera
+  WITH c.nombre AS conocimiento, count(DISTINCT a) AS cant
+  ORDER BY cant DESC
+  RETURN conocimiento, cant AS topCantidad
+  LIMIT 1
+}
+
+RETURN carrera, conocimiento, topCantidad AS cantidad
+ORDER BY carrera
+
+// 30.​Ranking de los primeros 2 conocimientos de la carrera "Ing en Sistemas de Información".
+
+MATCH (a:Persona)-[:POSEE]->(c:Conocimiento), (a)-[e:ESTUDIO]->(d:Carrera {nombre: "Ing en Sistemas de Información"})
+WHERE e.estado = "Completo"
+WITH d.nombre as carrera, c.nombre as conocim, count(DISTINCT a) AS cantidad
+RETURN carrera, conocim, max(cantidad) as maximo
+ORDER BY carrera, maximo DESC LIMIT 2
+
+
 
