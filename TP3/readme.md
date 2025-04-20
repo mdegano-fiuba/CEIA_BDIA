@@ -22,10 +22,6 @@
     <td># Archivo de configuración de Docker Compose para generar el entorno</td>
   </tr>
   <tr valign="center">
-    <td>XXX</td>
-    <td># Archivo para crear la base de datos</td>
-  </tr>
-    <tr valign="center">
     <td>Datos_Ejemplo_Neo.txt</td>
     <td># Datos para importar en la base de datos</td>
   </tr>
