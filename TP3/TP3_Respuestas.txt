@@ -1,0 +1,38 @@
+1.​ Obtener los nodos de todas las personas de la red.
+2.​ Obtener el nombre y fecha de nacimiento de la persona de apellido Domínguez.
+3.​ Obtener la lista de empresas en las que trabajó Domínguez.
+4.​ Obtener la lista de personas que estudiaron carreras que no son de nivel
+“Universitario” y los nombres de las carreras.
+5.​ Obtener los nodos etiquetados como Conocimiento.
+6.​ Obtener los nodos de todas las personas con nombre terminado en a.
+7.​ Crear un nodo para la persona Analía Martinelli si no existe.
+8.​ Asociar un conocimiento "Cálculo" a Analía Martinelli si no lo posee.
+9.​ Verificar si se creó duplicado del conocimiento "Cálculo".
+10.​Crear una relación ESTUDIO para Analía Martinelli con la carrera "Lic en Sist de Inf",
+estado "En curso".
+11.​Crear un nodo para Verónica Mendez.
+12.​Crear una relación CONOCE_A entre Analía y Verónica, asegurando que solo se
+cree una vez.
+13.​Actualizar o crear el nodo de Analía Martinelli con fecha de nacimiento 30/06/1968.
+14.​Agregarle la etiqueta "Empleado" y el país Argentina a Analía.
+15.​Eliminar la fecha de nacimiento y la etiqueta Persona de Analía.
+16.​Eliminar el nodo de Analía y todas sus relaciones.
+17.​Contar los nodos en total.
+18.​Contar los tipos de relaciones.
+19.​Listar todos los nodos y sus relaciones.
+20.​Obtener los nombres y rubros de las empresas registradas, reemplazando el rubro
+"Telefonía" por IT.
+21.​Determinar qué etiquetas tienen los nodos que son destino de la relación ESTUDIO.
+22.​Verificar las etiquetas de la carrera en la relación ESTUDIO.
+23.​Usar UNWIND para transformar una colección en filas individuales.
+24.​Contar la cantidad de personas que estudiaron una carrera en cualquier estado.
+25.​Identificar si puede llegarse directa o indirectamente desde Mario López hasta Jorge
+Lupis mediante la relación CONOCE_A.
+226.​Obtener el camino más corto entre Gustavo y Mario en la relación CONOCE_A.
+27.​Listar los caminos de relaciones de un camino determinado.
+28.​Verificar si una persona trabajó o trabajó en empresas que otro determinado
+profesional trabajo, para sugerir contactos.
+29.​Obtener los conocimientos más compartidos en cada carrera.
+30.​Ranking de los primeros 2 conocimientos de la carrera "Ing en Sistemas de
+Información".
+
