@@ -5,6 +5,8 @@ services:
     container_name: neo4j
     environment:
       - NEO4J_AUTH=neo4j/neo4j_185
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*
+      - NEO4J_dbms_security_procedures_allowlist=apoc.*
     ports:
       - "7474:7474"  # Interfaz web de administración
       - "7687:7687"  # Puerto para la conexión de aplicaciones (Bolt protocol)
@@ -12,12 +14,13 @@ services:
       - neo4j_data:/data  
     networks:
       - neo4j-network
-
+      
 volumes:
   neo4j_data:
 
 networks:
   neo4j-network:
     driver: bridge
+
 
 
