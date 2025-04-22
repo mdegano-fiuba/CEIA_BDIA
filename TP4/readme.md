@@ -1,4 +1,4 @@
-# TP1
+# TP4
 
 <br>
 
@@ -16,39 +16,28 @@
 
 <table border="0">
   <tr valign="center">
-    <td colspan="2">TP 1</td>
+    <td colspan="2">TP 4</td>
   </tr>
   <tr valign="center">
-    <td>docker-compose.yml</td>
-    <td># Archivo de configuración de Docker Compose para generar el entorno</td>
+    <td>docs/*.txt</td>
+    <td># Documentos utilizados como input para la creación de la DB.</td>
   </tr>
   <tr valign="center">
-    <td>2.chinook_pg_serial_pk_proper_naming.sql</td>
-    <td># Sentencias de inicialización de la DB</td>
+    <td>TP_Vectores.ipynb</td>
+    <td># Notebook con el código y desarrollo del TP.</td>
   </tr>
     <tr valign="center">
-    <td>PracticaChinook.sql</td>
+    <td>TP 4 Bases de vectores.pdf</td>
     <td># Consignas</td>
   </tr>
 </table>
 <br>
 
-## Set Up
+## Requisitos
 
-Ejecutar el siguiente comando para generar el entorno (PostgreSQL + CloudBeaver):
-
-```Bash
-docker-compose up -d
-```
-
-Ejecutar el siguiente comando para verificar el estado de los contenedores:
-```Bash
-docker ps -a
-```
-
-Aguardar hasta que todos los servicios estén en estado "Up (health: healthy)".
-
-Acceso a CloudBeaver: http://localhost:8978
+Entorno virtual con:
+* python versión 3.11.11
+* otros
 
 <br>
 
@@ -57,7 +46,7 @@ Acceso a CloudBeaver: http://localhost:8978
 <table border="0">
   <tr valign="center">
     <td><img src="../imgs/pdf.png" alt="PDF" height="40"></td>
-    <td><a href="./CEIA_BDIA_TP1_a1618.pdf" target="_blank">Entregable TP1</a></td>
+    <td><a href="./CEIA_BDIA_TP4_a1618.pdf" target="_blank">Entregable TP4</a></td>
   </tr>
 </table>
 <br>
