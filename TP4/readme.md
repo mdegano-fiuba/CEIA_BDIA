@@ -6,8 +6,8 @@
 <table border="0">
   <tr valign="center">
     <td><img src="../imgs/jupyter.png" alt="Jupyter" height="60"></td>
-    <td><img src="../imgs/python.png" alt="Python" height="80"></td>
-    <td><img src="../imgs/chromadb.png" alt="ChromaDB" height="40"></td>
+    <td><img src="../imgs/python.png" alt="Python" height="60"></td>
+    <td><img src="../imgs/chromadb.png" alt="ChromaDB" height="60"></td>
     <td><img src="../imgs/ollama.png" alt="Ollama" height="40"></td>
   </tr>
 </table>
