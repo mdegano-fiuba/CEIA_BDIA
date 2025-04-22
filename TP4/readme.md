@@ -37,8 +37,14 @@
 ## Requisitos
 
 Entorno virtual con:
-* python versión 3.11.11
-* otros
+* python 3.11.11  
+* numpy 1.24.3  
+* torch 2.0.1  
+* uuid 1.30  
+* transformers 4.35.0  
+* accelerate 0.20.3  
+* chromadb 0.4.6  
+* sentence-transformers 2.2.2  
 
 <br>
 
