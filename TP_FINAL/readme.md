@@ -14,18 +14,18 @@
 
 <table border="0">
   <tr valign="center">
-    <td colspan="2">TP 1</td>
+    <td colspan="2">TP Final</td>
   </tr>
   <tr valign="center">
     <td>docker-compose.yml</td>
     <td># Archivo de configuración de Docker Compose para generar el entorno</td>
   </tr>
   <tr valign="center">
-    <td>2.chinook_pg_serial_pk_proper_naming.sql</td>
+    <td>init_lego_db.sql</td>
     <td># Sentencias de inicialización de la DB</td>
   </tr>
-    <tr valign="center">
-    <td>PracticaChinook.sql</td>
+  <tr valign="center">
+    <td>Relacional.pdf</td>
     <td># Consignas</td>
   </tr>
 </table>
@@ -33,7 +33,7 @@
 
 ## Set Up
 
-Ejecutar el siguiente comando para generar el entorno (PostgreSQL + CloudBeaver):
+Ejecutar el siguiente comando para generar el entorno (PostgreSQL + pgAdmin):
 
 ```Bash
 docker-compose up -d
@@ -44,9 +44,7 @@ Ejecutar el siguiente comando para verificar el estado de los contenedores:
 docker ps -a
 ```
 
-Aguardar hasta que todos los servicios estén en estado "Up (health: healthy)".
-
-Acceso a CloudBeaver: http://localhost:8978
+Acceso a pgAdmin: http://localhost:8081
 
 <br>
 
@@ -55,7 +53,7 @@ Acceso a CloudBeaver: http://localhost:8978
 <table border="0">
   <tr valign="center">
     <td><img src="../imgs/pdf.png" alt="PDF" height="40"></td>
-    <td><a href="./CEIA_BDIA_TP1_a1618.pdf" target="_blank">Entregable TP1</a></td>
+    <td><a href="./CEIA_BDIA_TP_FINAL_a1618.pdf" target="_blank">Entregable TP Final</a></td>
   </tr>
 </table>
 <br>
