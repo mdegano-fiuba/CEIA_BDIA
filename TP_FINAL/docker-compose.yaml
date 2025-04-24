@@ -1,0 +1,45 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    networks:
+      - db_network
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=lego_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init_lego_db.sql:/docker-entrypoint-initdb.d/initdb.sql  
+      - ./dataset:/csv_data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-p", "5432", "-U", "postgres"]
+      interval: 60s
+      timeout: 20s
+      retries: 5
+   
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: always
+    ports:
+      - 8081:80
+    networks:
+      - db_network
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=mdegano.ext@fi.uba.ar
+      - PGADMIN_DEFAULT_PASSWORD=pgadmin
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin   
+      
+networks:
+  db_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  pgadmin_data:
+
