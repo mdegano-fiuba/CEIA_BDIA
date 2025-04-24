@@ -5,7 +5,7 @@
 ## Herramientas
 <table border="0">
   <tr valign="center">
-    <td><img src="../imgs/tp_final.png" alt="Docker" height="100"></td>
+    <td><img src="../imgs/tp_final.png" alt="Docker" height="150"></td>
   </tr>
 </table>
 <br>
